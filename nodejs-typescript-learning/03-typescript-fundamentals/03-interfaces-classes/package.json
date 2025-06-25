@@ -1,0 +1,19 @@
+{
+  "name": "02-basic-types",
+  "version": "1.0.0",
+  "description": "TypeScript extends JavaScript with a rich set of types. Let's explore the most common basic types you'll encounter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build": "tsc index.ts"
+  },
+  "dependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

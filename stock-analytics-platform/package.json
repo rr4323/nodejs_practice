@@ -1,0 +1,39 @@
+{
+  "name": "stock-analytics-platform",
+  "version": "1.0.0",
+  "description": "Real-time Stock Market Analytics & Prediction Platform with WebSockets, Kafka, and AI",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:dev": "concurrently \"npm:start:dev:*\"",
+    "start:dev:api-gateway": "npm run dev -w packages/api-gateway",
+    "start:dev:user-service": "npm run dev -w packages/user-service",
+    "start:dev:market-data": "npm run dev -w packages/market-data-service",
+    "start:dev:analytics": "npm run dev -w packages/analytics-service",
+    "start:dev:ai": "npm run dev -w packages/ai-service",
+    "start:dev:websocket": "npm run dev -w packages/websocket-service",
+    "start:dev:frontend": "npm run dev -w frontend",
+    "build": "npm run build --workspaces",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "kafka",
+    "websocket",
+    "real-time",
+    "analytics",
+    "ai",
+    "microservices"
+  ]
+}
