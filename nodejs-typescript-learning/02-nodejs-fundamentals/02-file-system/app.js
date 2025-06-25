@@ -58,4 +58,25 @@ Here's why this will eventually fail:
 
 /*
 Better way to use callback and modern way is to use promises.
+// CORRECT WAY - USING ASYNC/AWAIT (BEST)
+
+async function main() {
+  try {
+    // Step 1: Write to the file. The 'await' keyword pauses the function
+    // here until the write operation is fully complete.
+    await fsExample.writeToFile(fileName, 'Hello, World!');
+
+    // This code is GUARANTEED to run only AFTER the await line is done.
+    console.log('--- Write has completed, now reading... ---');
+    
+    await fsExample.readFromFile(fileName);
+    await fsExample.listFiles('.');
+    await fsExample.getFileInfo(fileName);
+
+  } catch (err) {
+    console.error("An error occurred:", err);
+  }
+}
+
+main();
 */
